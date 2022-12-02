@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
     body {
-        background-color: ;
+        background-color: lightgrey;
         margin: 0;
     }
 `
