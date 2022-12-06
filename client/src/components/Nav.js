@@ -6,9 +6,18 @@ function Nav() {
     return (
         <NavContainer>
             <ul>
-                <li>Invoices</li>
-                <li>Quotations</li>
-                <li>Clients</li>
+                <li>
+                    <span>Invoices</span>
+                    <div className='under-line'></div>
+                </li>
+                <li>
+                    <span>Quotations</span>
+                    <div className='under-line'></div>
+                </li>
+                <li>
+                    <span>Clients</span>
+                    <div className='under-line'></div>
+                </li>
             </ul>
         </NavContainer>
     )

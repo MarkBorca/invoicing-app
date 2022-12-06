@@ -4,30 +4,34 @@ const NavContainer = styled.nav`
 
     background-color: grey;
     width: 100%;
-    height: 80px;
-    margin-bottom: 50px;
+    height: 60px;
+    margin-bottom: 40px;
 
     ul{
+        width: 350px;
+        padding-right: 40px;
         display: flex;
+        justify-content: space-around;
         flex-direction: row;
         text-decoration: none;
-        margin: 0;
-    }
-
-    ul:first-child{
-        margin-left: 40px;
+        margin: 0 auto;
     }
 
     li{
         list-style: none;
-        margin-right: 50px;
         font-size: 20px;
         text-decoration: underline;
-        line-height: 80px;
+        line-height: 57px;
     }
 
-    li:hover{
+    li:hover .under-line{
         color: red;
+        background-color: red;
+    }
+
+    .under-line{
+        height: 3px;
+        background-color: aqua;
     }
 
 `

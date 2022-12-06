@@ -1,13 +1,13 @@
 import React from 'react';
 import GlobalStyles from './components/styles/Global'
-import InvoicePage from './components/InvoicingPage';
+import MainPage from './components/MainPage';
 
 function App() {
   
   return (
     <div className="App">
       <GlobalStyles />
-      <InvoicePage />
+      <MainPage />
     </div>
   );
 }
