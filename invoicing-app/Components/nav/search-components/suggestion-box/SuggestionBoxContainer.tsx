@@ -19,7 +19,7 @@ export default function SuggestionBox({ searchFocus, searchState, setSearchFocus
 
     return (
         <>
-            <div className={`z-40 absolute top-11 left-1/2 translate-x-[-50%] w-2/5 min-h-[50px] max-h-[300px] p-[10px] bg-white border-black border-[1px] rounded-md overflow-y-auto overflow-x-hidden ${searchFocus ? 'block' : 'hidden'}`}>
+            <div className={`z-50 absolute top-11 left-1/2 translate-x-[-50%] w-2/5 min-h-[50px] max-h-[350px] p-[10px] bg-white border-black border-[1px] rounded-[4px] overflow-y-auto overflow-x-hidden ${searchFocus ? 'block' : 'hidden'}`}>
                 {/** medium widgets      **/}
                 <div className={searchState ? 'hidden' : 'block'} >
                     <WidgetMd name={'Client'} />
@@ -37,7 +37,7 @@ export default function SuggestionBox({ searchFocus, searchState, setSearchFocus
                 </div>
             </div>
 
-            <div className={`bg-black absolute z-30 w-screen h-screen bg-opacity-70 ${searchFocus ? 'block' : 'hidden'}`} onClick={ () => setSearchFocus(!searchFocus) }></div>
+            <div className={`bg-black absolute z-40 w-screen h-screen bg-opacity-70 ${searchFocus ? 'block' : 'hidden'}`} onClick={ () => setSearchFocus(false) }></div>
         </>
     )
 }
