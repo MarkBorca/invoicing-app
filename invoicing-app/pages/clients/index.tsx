@@ -1,9 +1,22 @@
-import Nav from '@/Components/nav/Nav'
+import "material-icons/iconfont/material-icons.css";
+
+import Nav from "@/Components/nav/nav";
+import Main from "@/Components/main/main";
+
+import { useState } from "react";
 
 export default function Clients(){
-    return (
-        <div className='relative flex flex-col min-h-screen h-screen bg-yellow-600'>
-            <Nav page='Clients'/>
-        </div>
+    let [navState, setNavState] = useState(false);
+
+  return (
+    <div className="relative flex flex-row min-h-screen">
+      <Nav
+        navState={navState}
+        setNavState={setNavState}
+        activePage="Clients"
+      />
+
+      <Main navState={navState}></Main>
+    </div>
     )
 }

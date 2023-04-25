@@ -2,7 +2,11 @@ import 'material-icons/iconfont/material-icons.css'
 
 import FilterInput from '../common-components/FilterInput'
 import MediumButton from '../common-components/MediumButton'
-import TableRow from '../common-components/TableRow'
+import TableRow from '../common-components/simple-table/TableRow'
+import TableHeader from '../common-components/simple-table/TableHeader'
+import Table from '../common-components/simple-table/Table'
+
+import InvoiceIcon from '/public/icons/invoice-icon.svg'
 
 export default function QuotationsPage() {
     return (
@@ -18,18 +22,25 @@ export default function QuotationsPage() {
                     <FilterInput />
                 </div>
 
-                <div className="bg-green w-full min-h-full flex flex-col ">
-                    <div className="bg-green w-full h-10 border-gray-400 border-b-[1px] mb-2 flex flex-row place-items-center">
+                <Table>
+                    <TableHeader>
                         <div className="bg-blue w-[70px]"></div>
                         <p className="bg-blue w-[15%] min-w-[100px] ">Quotation</p>
                         <p className="bg-blue w-[40%] min-w-[150px] ">Client</p>
                         <p className="bg-blue w-[15%] min-w-[100px] ">Date</p>
                         <p className="bg-blue w-[calc(30%-70px)] min-w-[150px] text-right">Price</p>
-                    </div>
+                    </TableHeader>
 
-                    <TableRow id='d_01' clientName='Mark Borca' date='10 apr' price='20.180,99 $' color='green' />
-
-                </div>
+                    <TableRow>
+                        <div className="bg-blue w-[70px]">
+                            <InvoiceIcon className={`w-8 h-8 fill-green-600 mx-auto`} />
+                        </div>
+                        <p className="bg-blue w-[15%] min-w-[100px] ">d_01</p>
+                        <p className="bg-blue w-[40%] min-w-[150px] ">Mark Borca</p>
+                        <p className="bg-blue w-[15%] min-w-[100px] ">10 apr</p>
+                        <p className="bg-blue w-[calc(30%-70px)] min-w-[150px] text-right">20.180,99 $</p>
+                    </TableRow>
+                </Table>
 
             </div>
         </div>

@@ -1,13 +1,20 @@
-import { Inter } from 'next/font/google'
-import 'material-icons/iconfont/material-icons.css'
-import Nav from '@/Components/nav/Nav'
+import "material-icons/iconfont/material-icons.css";
 
-const inter = Inter({ subsets: ['latin'] })
+import Nav from "@/Components/nav/nav";
+import Main from "@/Components/main/main";
+
+import { useState } from "react";
 
 export default function Home() {
+  let [navState, setNavState] = useState(false);
   return (
-    <div className='relative flex flex-col min-h-screen h-screen bg-slate-600'>
-      <Nav />
+    <div className="relative flex flex-row min-h-screen">
+      <Nav
+        navState={navState}
+        setNavState={setNavState}
+        activePage="Dashboard"
+      />
+      <Main navState={navState}></Main>
     </div>
-  )
+  );
 }

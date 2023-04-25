@@ -1,11 +1,22 @@
-import Nav from '@/Components/nav/Nav'
-import QuotationsPage from '@/Components/quotations-page/QuatationsPage'
+import "material-icons/iconfont/material-icons.css";
 
-export default function Quotations(){
-    return (
-        <div className='relative flex flex-col min-h-screen h-screen bg-white'>
-            <Nav page='Quatations' />
-            <QuotationsPage />
-        </div>
-    )
+import Nav from "@/Components/nav/nav";
+import Main from "@/Components/main/main";
+
+import { useState } from "react";
+
+export default function Quotations() {
+  let [navState, setNavState] = useState(false);
+
+  return (
+    <div className="relative flex flex-row min-h-screen">
+      <Nav
+        navState={navState}
+        setNavState={setNavState}
+        activePage="Quotations"
+      />
+
+      <Main navState={navState}></Main>
+    </div>
+  )
 }

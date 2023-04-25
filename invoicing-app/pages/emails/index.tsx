@@ -1,9 +1,22 @@
-import Nav from '@/Components/nav/Nav'
+import "material-icons/iconfont/material-icons.css";
 
-export default function Emails(){
-    return (
-        <div className='relative flex flex-col min-h-screen h-screen bg-purple-600'>
-            <Nav page='Emails' />
-        </div>
-    )
+import Nav from "@/Components/nav/nav";
+import Main from "@/Components/main/main";
+
+import { useState } from "react";
+
+export default function Emails() {
+  let [navState, setNavState] = useState(false);
+
+  return (
+    <div className="relative flex flex-row min-h-screen">
+      <Nav
+        navState={navState}
+        setNavState={setNavState}
+        activePage="Emails"
+      />
+
+      <Main navState={navState}></Main>
+    </div>
+  );
 }

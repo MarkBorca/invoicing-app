@@ -1,11 +1,21 @@
-import Nav from '@/Components/nav/Nav'
-import InvoicesPage from '@/Components/invoices-page/InvoicesPage'
+import "material-icons/iconfont/material-icons.css";
 
-export default function Invoices(){
-    return (
-        <div className='relative flex flex-col min-h-screen h-screen bg-white'>
-            <Nav page='Invoicing' />
-            <InvoicesPage />
-        </div>
-    )
+import Nav from "@/Components/nav/nav";
+import Main from "@/Components/main/main";
+
+import { useState } from "react";
+
+export default function Invoices() {
+  let [navState, setNavState] = useState(false);
+
+  return (
+    <div className="relative flex flex-row min-h-screen">
+      <Nav
+        navState={navState}
+        setNavState={setNavState}
+        activePage="Invoices"
+      />
+      <Main navState={navState}></Main>
+    </div>
+  );
 }
