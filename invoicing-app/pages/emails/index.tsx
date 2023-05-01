@@ -6,17 +6,24 @@ import Main from "@/Components/main/main";
 import { useState } from "react";
 
 export default function Emails() {
-  let [navState, setNavState] = useState(false);
+    let [navState, setNavState] = useState(false);
+    let [pageNavBar, setPageNavBar] = useState(false);
 
-  return (
-    <div className="relative flex flex-row min-h-screen">
-      <Nav
-        navState={navState}
-        setNavState={setNavState}
-        activePage="Emails"
-      />
+    return (
+        <div className='relative flex flex-row min-h-screen'>
+            <Nav
+                navState={navState}
+                setNavState={setNavState}
+                activePage='Emails'
+            />
 
-      <Main navState={navState}></Main>
-    </div>
-  );
+            <Main
+                navState={navState}
+                pageNavBar={pageNavBar}
+                setPageNavBar={setPageNavBar}
+                page='Emails'
+                btnValue="New email"
+            ></Main>
+        </div>
+    );
 }
